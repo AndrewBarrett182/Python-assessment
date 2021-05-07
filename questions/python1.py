@@ -90,8 +90,12 @@ def two(arg1):
 
 	# How do we ignore case in a String? help(str) may offer some insight.
 
-def three(input):
-    return 0
+def three(input_):
+	count = 0
+	for i in input_.lower():
+		if (i == "a") or (i == "e") or (i == "i") or (i == "o") or (i == "u"):
+			count = count + 1
+	return count
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
