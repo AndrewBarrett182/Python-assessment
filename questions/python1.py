@@ -117,8 +117,19 @@ def three(input_):
 	# Step through the logic here in order to solve the problem, you may find help(range) helpful.
 
 
-def four(input):
-    return False
+def four(input_):
+	for i in range(1, len(input_.lower())):
+		if (input_[i] == "i") and (input_[i-1] == "e"):
+			if input_[i-2] == "c":
+				return True
+			else:
+				return False
+		
+		elif (input_[i] == "e") and (input_[i-1] == "i"):
+			if input_[i-2] == "c":
+				return False
+			else:
+				return True
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
