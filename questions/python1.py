@@ -236,7 +236,15 @@ def seven(inputString, char):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def eight(arg1):
-	return 0
+	separate = arg1.split()
+	highest = 0
+	for i in range(len(separate)):
+		sum = 0
+		for j in separate[i]:
+			sum = sum + int(j)
+		if sum > highest:
+			highest = sum
+	return highest
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
