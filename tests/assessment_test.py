@@ -1,4 +1,7 @@
 import pytest
+import sys
+import os
+sys.path.append(os.path.abspath("/Users/Andre/OneDrive/Desktop/Work/QA/Python-assessment"))
 from questions import python1
 
 def test_one():
