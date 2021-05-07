@@ -205,6 +205,10 @@ def six(string, int_, char):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
+	ignore_whitespace = inputString.replace(" ", "")
+	for i in range(len(ignore_whitespace)):
+		if ignore_whitespace[i] == char:
+			return i + 1
 	return -1
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
