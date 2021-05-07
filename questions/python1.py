@@ -270,8 +270,19 @@ def eight(arg1):
 	
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
-def nine(input):
-	return ""
+def nine(input_):
+	ignore_case = input_.lower()
+	first = ignore_case.find("bert")
+	if first == -1:
+		return ""
+	else:
+		new = ignore_case[first+4:]
+		last = new.find("bert")
+		if last == -1:
+			return ""
+		else:
+			string = new[:last]
+			return string
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -300,8 +311,15 @@ def nine(input):
 
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
-def ten(input):
-	return []
+def ten(input_):
+	csv = input_.split(",")
+	names = []
+	for i in range(2, len(csv), 4):
+		if csv[i] == "False":
+			name = csv[i-2]
+			if name not in names:
+				names.append(name)
+	return names
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
