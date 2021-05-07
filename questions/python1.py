@@ -148,8 +148,11 @@ def four(input_):
 
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
-def five(input):
-	return 1
+def five(input_):
+	if input_ == 1:
+		return 1
+	else:
+		return input_ * five(input_ - 1)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
